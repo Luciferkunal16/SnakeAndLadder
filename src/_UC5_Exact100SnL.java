@@ -1,4 +1,4 @@
-public class _UC4_PlayerReacher100SnL {
+public class _UC5_Exact100SnL {
 	int dice() {
 		int dice=(int)(Math.random()*10%6+1);
 		return dice;
@@ -12,7 +12,7 @@ public class _UC4_PlayerReacher100SnL {
 	
 	public static void main(String[] args) {
 		int position=0;
-		_UC4_PlayerReacher100SnL rv=new _UC4_PlayerReacher100SnL();
+		_UC5_Exact100SnL rv=new _UC5_Exact100SnL();
 		System.out.println("Welcome To Snake And Ladder Game");
 		System.out.println("Player 1 is at position "+position);
 		System.out.println("Player 1 rolls the dice and got");
@@ -47,6 +47,5 @@ public class _UC4_PlayerReacher100SnL {
 		System.out.println("Player 1 Win is at position "+position);
 	}
 
-	
+
 }
-	
