@@ -1,4 +1,4 @@
-public class _UC5_Exact100SnL {
+public class _UC6_NumofDiceSnL {
 	int dice() {
 		int dice=(int)(Math.random()*10%6+1);
 		return dice;
@@ -12,19 +12,20 @@ public class _UC5_Exact100SnL {
 	
 	public static void main(String[] args) {
 		int position=0;
-		_UC5_Exact100SnL rv=new _UC5_Exact100SnL();
+		int diceCount=0;
+		_UC6_NumofDiceSnL rv=new _UC6_NumofDiceSnL();
 		System.out.println("Welcome To Snake And Ladder Game");
 		System.out.println("Player 1 is at position "+position);
-		System.out.println("Player 1 rolls the dice and got");
 		while(position<100){
-		//System.out.println(rv.dice());
+		
 		int option=rv.option();
 		switch (option) {
 			case 1:
-			System.out.println("NO PLAYs");
+				diceCount++;
+
 			break;
 			case 2  :
-			System.out.println("LADDER ");
+				diceCount++;
 			position=position+rv.dice();
 			 if(position>100){
 				position=position-rv.dice();
@@ -32,9 +33,10 @@ public class _UC5_Exact100SnL {
 			break;
 		
 			case 3:
-			System.out.println("Snake");
+				diceCount++;
 			if(position>0) {
 			position=position-rv.dice();
+			
 			}
 			else if(position<0){
 			break;
@@ -42,9 +44,10 @@ public class _UC5_Exact100SnL {
 			break;
 			
 		}
-		
+	System.out.println("Player Position at "+diceCount+" is "+position);	
 	}
 		System.out.println("Player 1 Win is at position "+position);
+		System.out.println("Dice Count is "+diceCount);
 	}
 
 
